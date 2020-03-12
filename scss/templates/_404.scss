@@ -1,0 +1,14 @@
+.error404 {
+	.site-content {
+		padding: 5vw 1.25em;
+
+		& > .wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			max-width: 60rem;
+			height: 100%;
+			text-align: center;
+		}
+	}
+}

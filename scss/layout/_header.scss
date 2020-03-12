@@ -1,0 +1,116 @@
+.site-header {
+	-ms-grid-row: 1;
+	grid-row: 1;
+}
+
+.header-top {
+	background: $bg_green;
+
+	@include breakpoint(tablet) {
+		padding: 0 1.25rem;
+
+		.wrapper {
+			display: flex;
+			justify-content: space-between;
+			max-width: 100rem;
+		}
+	}
+}
+
+.site-branding {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: .9375rem 1.25rem;
+	color: $white;
+
+	@include breakpoint(tablet) {
+		padding-left: 0;
+	}
+}
+
+.csu-signature {
+	margin-right: .9375rem;
+	padding-right: .9375rem;
+	border-right: .125rem solid $white;
+	font-size: 1rem;
+}
+
+.signature-link {
+	@include transition();
+	display: block;
+	width: $acronym_width;
+	height: $signature_height;
+	background: url(../images/signature-acronym.svg) no-repeat center center / contain;
+	color: $white;
+
+	@include breakpoint(tablet) {
+		width: $stacked_width;
+		background-image: url(../images/signature-stacked.svg);
+	}
+
+	@include breakpoint(desktop) {
+		width: $oneline_width;
+		background-image: url(../images/signature-oneline.svg);
+	}
+}
+
+.secondary-identifier {
+	margin: 0;
+	font-family: $proxima;
+	font-size: .75rem;
+	font-weight: 400;
+	line-height: 1;
+	@include tracking(100);
+	text-transform: uppercase;
+
+	@include breakpoint(phone) {
+		font-size: .875em;
+	}
+
+	@include breakpoint(tablet) {
+		font-size: 1.1875rem;
+	}
+}
+
+.identifier-link {
+	color: $white;
+	text-decoration: none;
+
+	&:visited {
+		color: $white;
+	}
+
+	&:hover, &:active, &:focus {
+		color: $white;
+	}
+}
+
+.site-dates {
+	flex: 0 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;// flex-end;
+	padding: 0 1.25rem .9375rem;
+
+	@include breakpoint(tablet) {
+		padding: .9375rem 1.25rem;
+	}
+
+	p {
+		color: $white;
+		font-family: $heading_font;
+		font-weight: 500;
+		@include tracking(80);
+		line-height: 1;
+		text-transform: uppercase;
+
+		@include breakpoint(tablet) {
+			font-size: 1em;
+		}
+
+		@include breakpoint(desktop) {
+			font-size: 1.1875rem;
+		}
+	}
+}

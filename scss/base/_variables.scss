@@ -1,0 +1,57 @@
+// Color Variables
+// Brand Colors
+$csu_green:       #004C23;
+$bg_green:        #1E4D2B;
+$bg_ltgreen:      lighten($bg_green, 4%);
+$dk_green:        darken($csu_green, 2%);
+$csu_gold:        #CBC46E;
+$white:           #fff;
+$black:           #000;
+
+// Secondary Colors
+$black_80:        #58595b;
+$aggie_orange:    #f47920;
+
+// Tertiary Colors
+$alfalfa:         #c4d82e;
+$canyon:          #ea5329;
+$dark_slate:      #005356;
+$reservoir:       #00a5b8;
+$sunshine:        #f9c606;
+
+// Theme Colors
+$body_color:      #4c4c4c;
+$heading_color:   #333;
+$off_white:       #f3f3f3;
+$lt_grey:         #ededed;
+$grey:            #e7e7e7;
+$md_grey:         #dbdbdb;
+$dk_grey:         #cfcfcf;
+$overlay:         rgba($black, .54);
+$overlay_wt:      rgba($white, .81);
+$selection_bg:    lighten($csu_gold, 4%);
+$selection_color: $csu_green;
+
+
+// Font Variables
+$system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$proxima: 'Proxima Nova', sans-serif; // normal & italic: 100, 300, 400, 600, 700, 800, 900
+$factoria: 'Factoria', sans-serif; // normal & italic: 100, 300, 400, 500, 600, 700, 800, 900
+
+$line_height: 1.5;
+
+// Theme Fonts
+$body_font: $proxima;
+$heading_font: $factoria;
+$ident_font: $proxima;
+
+/* CSU Signature Sizes
+ * acronym:  609 x 229 -- min: 113 -- max: 146
+ * stacked:  929 x 229 -- min: 172 -- max: 221
+ * oneline: 1883 x 229 -- min: 350 -- max: 450
+ */
+$signature_height: 2.75rem;
+$acronym_width: 7.3125rem;
+$stacked_width: 11.125rem;
+$oneline_width: 22.625rem;
+$wordmark_width: 22.625em;

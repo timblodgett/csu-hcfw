@@ -1,0 +1,179 @@
+.page-template-page-students {
+	.entry-content {
+		@include breakpoint(tablet) {
+			width: 80%;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		p {
+			text-align: center;
+		}
+		.disclaimer {
+			@include breakpoint(tablet) {
+				width: 75%;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+}
+
+.hcfw-student-events {
+	.event-date {
+		margin-top: 3.75em;
+	}
+
+	.date-name {
+		@include transition();
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 0 1.5rem;
+		font-size: 1.5em;
+		font-weight: bold;
+		@include tracking(40);
+		line-height: 1;
+		text-align: center;
+		text-transform: uppercase;
+
+		&:before,
+		&:after {
+			content: '';
+			flex: 0 1 auto;
+			opacity: .5;
+			display: block;
+			margin: 0 .5em .0625em;
+			margin: 0 0 .0625em;
+			width: 100%;
+			max-width: 5em;
+			height: 0;
+			border-bottom: .125em solid $csu_gold;
+		}
+	}
+
+	.name-inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 0 .5em;
+
+		@include breakpoint(tablet) {
+			display: block;
+		}
+
+		& > * {
+			max-width: 100%;
+		}
+	}
+
+	.date-day,
+	.date-month-num {
+		white-space: nowrap;
+	}
+
+	.date-sep {
+		display: none;
+
+		@include breakpoint(tablet) {
+			display: inline;
+		}
+	}
+
+	.event {
+		@include breakpoint(tablet) {
+			display: -ms-grid;
+			display: grid;
+			grid-gap: 1.25em;
+			-ms-grid-columns: 3fr 1.25em 2fr;
+			grid-template-columns: 3fr 2fr;
+		}
+
+		@include breakpoint(desktop) {
+			-ms-grid-columns: 2fr 1.25em 1fr;
+			grid-template-columns: 2fr 1fr;
+		}
+
+		&:not(:first-of-type) {
+			margin-top: 1.5em;
+			border-top: .0625em solid $lt_grey;
+			padding-top: 1.5em;
+		}
+	}
+
+	.event-desc {
+		@include breakpoint(tablet) {
+			-ms-grid-column: 1;
+			grid-column: 1;
+		}
+	}
+
+	.event-name {
+		margin-bottom: 1.5rem;
+		font-size: 1.375em;
+	}
+
+	.event-details {
+		margin-top: 1.5em;
+
+		@include breakpoint(tablet) {
+			-ms-grid-column: 3;
+			grid-column: 2;
+			align-self: start;
+			margin: 0;
+			border-radius: .1875rem;
+			background: $off_white;
+			padding: 1.25em;
+		}
+
+		.detail {
+			display: flex;
+			line-height: 1.2;
+
+			&:not(:last-child) {
+				margin-bottom: .75em;
+			}
+
+			.icon {
+				width: 1em;
+				margin-right: .375em;
+				line-height: inherit;
+				text-align: center;
+			}
+
+			.room {
+				margin-top: .25em;
+				display: block;
+				font-size: .875em;
+				font-style: italic;
+			}
+		}
+
+		.location {
+			a {
+				color: inherit;
+				text-decoration: none;
+
+				&:visited {
+					color: inherit;
+				}
+
+				&:hover, &:focus, &:active {
+					color: inherit;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	.register-link {
+		margin-top: 1.5em;
+		text-align: end;
+
+		@include breakpoint(tablet) {
+			text-align: center;
+		}
+	}
+}

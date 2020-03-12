@@ -1,0 +1,56 @@
+// input types:
+// button, checkbox, color, date, datetime-local, email, file, hidden, image, month, number, password, radio, range, reset, search, submit, tel, text, time, url, week
+
+input,
+select,
+textarea {
+	font-size: 100%; /* Corrects font size not being inherited in all browsers */
+	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+}
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	@extend %button;
+}
+
+input[type="search"] {
+	/* Address appearance set to searchfield in S5, Chrome */
+	-webkit-appearance: none;
+
+	&::-webkit-search-decoration {
+		/* Correct oddly displayed inner padding in S5, Chrome on OSX */
+		-webkit-appearance: none;
+	}
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="password"],
+input[type="search"],
+textarea {
+	color: #666;
+	border: .0625em solid #ccc;
+	border-radius: .1875em;
+
+	&:focus {
+		color: #111;
+	}
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="password"],
+input[type="search"] {
+	padding: .1875em;
+}
+
+textarea {
+	/* Improve readability and alignment in all browsers */
+	vertical-align: top;
+}

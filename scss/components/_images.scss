@@ -1,0 +1,28 @@
+img.wp-smiley {
+	.page-content &,
+	.entry-content &,
+	.comment-content & {
+		border: none;
+		margin-bottom: 0;
+		margin-top: 0;
+		padding: 0;
+	}
+}
+
+.wp-caption {
+	margin-bottom: #{$line_height}em;
+	max-width: 100%;
+
+	img[class*="wp-image-"] {
+		display: block;
+		margin: 0 auto;
+	}
+
+	.wp-caption-text {
+		margin: 0.5em 0;
+	}
+}
+
+.wp-caption-text {
+	text-align: center;
+}

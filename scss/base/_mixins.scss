@@ -1,0 +1,39 @@
+@mixin breakpoint($point) {
+	@if $point == phone {
+		@media (min-width: 30em) { @content; }
+	}
+	@else if $point == tablet {
+		@media (min-width: 45em) { @content; }
+	}
+	@else if $point == desktop {
+		@media (min-width: 60em) { @content; }
+	}
+	@else if $point == widescreen {
+		@media (min-width: 100em) { @content; }
+	}
+	@else {
+		@media (min-width: $point) { @content; }
+	}
+}
+
+@mixin transition($prop: all, $duration: 0.3s, $timeFunc: ease, $delay: null) {
+	-webkit-transition: $prop $duration $timeFunc $delay;
+	-moz-transition: $prop $duration $timeFunc $delay;
+	transition: $prop $duration $timeFunc $delay;
+}
+
+@mixin tracking($num) {
+	letter-spacing: ( $num / 1000 ) * 1em;
+}
+
+@mixin button() {
+	@include transition();
+	/* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+	margin: 0;
+	border: .0625em solid;
+	border-radius: .1875em;
+	/* Correct font size not being inherited in all browsers */
+	font-size: 100%;
+	/* Improve appearance and consistency in all browsers */
+	vertical-align: baseline;
+}

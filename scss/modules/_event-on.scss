@@ -1,0 +1,103 @@
+#evcal_head {
+	display:none;
+}
+
+.eventon_sorting_section {
+	.eventon_sort_line {
+		display: none;
+	}
+}
+
+.evoDV {
+	.evodv_current_day {
+		background: $csu_green
+		;
+		p.evodv_events {
+			display: none !important;
+		}
+
+		p.evodv_daynum {
+			span {
+				opacity: .6;
+			}
+		}
+	}
+}
+
+.ajde_evcal_calendar {
+	max-width: 60rem;
+	margin: 0 auto;
+
+	&.evoDV {
+		#evcal_list {
+			border: none;
+			padding-top: 7px;
+		}
+	}
+
+	.eventon_sorting_section {
+		border: none;
+	}
+
+	.eventon_events_list {
+		.eventon_list_event {
+			margin-bottom: .5em !important;
+
+			// prevent text area size from changing on event card hover
+			.desc_trig {
+				padding-right: 4px;
+
+				&:hover {
+					padding-right: 0;
+				}
+			}
+
+			.event_description {
+				border: none;
+
+				.evcal_close {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.evcal_event_title {
+		font-weight: 700;
+	}
+}
+
+.evcal_cblock {
+	.evo_time {
+		.end {
+			display: none; // hide event end time on card top
+		}
+	}
+}
+
+.evcal_desc {
+	.evcal_desc_info, .evcal_desc3 {
+		padding-top: 7px;
+	}
+
+	&:after {
+		display: block;
+		clear: both;
+		content: "";
+		background: url("../img/expand2.png") no-repeat center;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 40px;
+		height: 40px;
+	}
+}
+
+.evo_h3 {
+	font-weight: 700 !important;
+	padding-bottom: .5em !important;
+}
+
+.evo_location_name {
+	padding-bottom: .25em !important;
+}

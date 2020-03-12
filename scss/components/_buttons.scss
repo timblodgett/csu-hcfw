@@ -1,0 +1,43 @@
+%button {
+	@include button();
+	/* Corrects inability to style clickable 'input' types in iOS */
+	-webkit-appearance: button;
+	padding: .375em 1em;
+	background: $grey;
+	border-color: $dk_grey;
+	color: $black_80;
+
+	&:hover, &:focus, &:active {
+		background: $md_grey;
+	}
+}
+
+button {
+	@extend %button;
+}
+
+/* Links styled to look like buttons */
+.btn-green,
+.button {
+	@include button();
+	display: inline-block;
+	border-color: transparent;
+	padding: .5625em 1.5em .4375em;
+	background: $bg_ltgreen;
+	color: white;
+	font-size: .9375em;
+	@include tracking(60);
+	line-height: 1.2;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	&:visited {
+		color: white;
+	}
+
+	&:hover, &:active, &:focus {
+		color: white;
+		background: $dk_green;
+		text-decoration: none;
+	}
+}

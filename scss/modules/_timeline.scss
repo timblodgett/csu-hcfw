@@ -1,0 +1,226 @@
+.timeline {
+	list-style-type: none;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+
+	&:before {
+		@include transition();
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 2em;
+		width: .125em;
+		margin-left: -.09375em;
+		background-color: $csu_gold;
+
+		@include breakpoint(phone) {
+			left: 2.5em;
+		}
+
+		@include breakpoint(tablet) {
+			left: 50%;
+		}
+	}
+
+	& > .event {
+		@extend .clearfix;
+		position: relative;
+		min-height: 4em;
+
+		@include breakpoint(phone) {
+			min-height: 5em;
+		}
+
+		@include breakpoint(tablet) {
+			min-height: 6.25em;
+		}
+
+		@include breakpoint(desktop) {
+			min-height: 7.5em;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 2.5em;
+
+			@include breakpoint(tablet) {
+				margin-bottom: 3.125em;
+			}
+
+			@include breakpoint(desktop) {
+				margin-bottom: 3.75em;
+			}
+		}
+
+		.point {
+			@include transition();
+			position: absolute;
+			left: 0;
+			z-index: 100;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 4em;
+			height: 4em;
+			margin-left: 0;
+			background: $bg_green;
+			border: .1875em solid $csu_gold;
+			border-radius: 50%;
+
+			@include breakpoint(phone) {
+				width: 5em;
+				height: 5em;
+			}
+
+			@include breakpoint(tablet) {
+				left: 50%;
+				width: 6.25em;
+				height: 6.25em;
+				margin-left: -3.125em;
+			}
+
+			@include breakpoint(desktop) {
+				height: 7.5em;
+				width: 7.5em;
+				margin-left: -3.75em;
+			}
+
+			p {
+				margin: .0625em 0 0 0;
+				color: $white;
+				font-size: 1.0625em;
+				font-weight: 600;
+				@include tracking(60);
+				line-height: 1;
+
+				@include breakpoint(tablet) {
+					font-size: 1.125em;
+				}
+
+				@include breakpoint(desktop) {
+					font-size: 1.25em;
+				}
+			}
+		}
+
+		.info {
+			position: relative;
+			float: right;
+			width: 100%;
+			padding: 0 0 0 5.875em;
+
+			@include breakpoint(phone) {
+				padding: 0 0 0 6.875em;
+			}
+
+			@include breakpoint(tablet) {
+				width: 41%;
+				padding: 0 0 1.875em 1.25em;
+			}
+
+			@include breakpoint(desktop) {
+				padding: 0 0 1.25em 1.25em;
+			}
+
+			.container {
+				position: relative;
+				min-height: 5em;
+				background: $csu_green;
+				border: .1875em solid $csu_gold;
+				border-radius: .1875em;
+				padding: .75em;
+				color: $white;
+
+				@include breakpoint(tablet) {
+					min-height: 6.25em;
+					padding: 1em;
+				}
+
+				@include breakpoint(desktop) {
+					min-height: 7.5em;
+				}
+
+				&:before,
+				&:after {
+					@include transition();
+					content: '';
+					position: absolute;
+					top: 1.8125em;
+					right: 100%;
+					height: 0;
+					width: 0;
+					border: solid transparent;
+
+					@include breakpoint(phone) {
+						top: 2.3125em;
+					}
+
+					@include breakpoint(tablet) {
+						top: 2.9375em;
+					}
+
+					@include breakpoint(desktop) {
+						top: 3.5625em;
+					}
+				}
+
+				&:before {
+					margin-top: -1.5em;
+					border-width: 1.5em;
+					border-right-color: $csu_gold;
+				}
+
+				&:after {
+					margin-top: -1.25em;
+					border-width: 1.25em;
+					border-right-color: $csu_green;
+				}
+			}
+
+			.heading {
+				margin-top: 0;
+				margin-bottom: .625em;
+				padding: .25em 0;
+				color: inherit;
+				font-size: 1.25em;
+			}
+		}
+
+		&:nth-child(odd) {
+			.info {
+				@include breakpoint(tablet) {
+					float: left;
+					padding: 0 1.25em 1.25em 0;
+				}
+
+				.container {
+					&:before,
+					&:after {
+						@include breakpoint(tablet) {
+							left: 100%;
+							border-color: transparent;
+						}
+					}
+
+					&:before {
+						@include breakpoint(tablet) {
+							margin-top: -1.5em;
+							border-width: 1.5em;
+							border-left-color: $csu_gold;
+						}
+					}
+
+					&:after {
+						@include breakpoint(tablet) {
+							margin-top: -1.25em;
+							border-width: 1.25em;
+							border-left-color: $csu_green;
+						}
+					}
+				}
+			}
+		}
+	}
+}
